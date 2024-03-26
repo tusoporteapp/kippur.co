@@ -285,7 +285,7 @@
         <div class="d-flex justify-content-center align-items-center" style="width: 100%;"><button class="btn btn-primary" id="shareButton" type="button" style="margin-bottom: 9px;width: 100%;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;background: rgb(45,44,56);border-style: none;color: rgb(151,172,79);"><i class="icon ion-android-share"></i>&nbsp;</button><button class="btn btn-danger add-button" type="button" style="margin-bottom: 9px;width: 100%;border-bottom-left-radius: 0px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;background: rgb(151,172,79);border-style: none;"><i class="icon ion-ios-download-outline"></i>&nbsp;</button><a class="btn btn-danger" role="button" style="margin-bottom: 9px;width: 100%;border-bottom-left-radius: 0px;border-top-left-radius: 0px;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-style: none;background: rgb(45,44,56);" href="https://g.page/r/CYCPfR-iPJ64EBM/review"><i class="icon ion-chatboxes" style="color: rgb(151,172,79);"></i>&nbsp;</a></div>
         <div class="offcanvas-body"></div>
     </div><script>
-document.getElementById("shareButton").addEventListener("click", function() {
+function compartirContenido() {
     // Verificar si el navegador soporta la API de Web Share
     if (navigator.share) {
         // Definir el mensaje a compartir
@@ -306,7 +306,9 @@ document.getElementById("shareButton").addEventListener("click", function() {
         // Mensaje alternativo si el navegador no soporta la API de Web Share
         alert("Tu navegador no soporta la función de compartir.");
     }
-});
+}
+
+document.getElementById("shareButton").addEventListener("click", compartirContenido);
 </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
