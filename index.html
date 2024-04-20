@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css?h=4a137410e50fe91a22b09a0763454a44">
     <link rel="manifest" href="/manifest.json?h=589bcc5a6c2558e8a169b416b411fdc8" crossorigin="use-credentials">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <link rel="stylesheet" href="/assets/css/styles.min.css?h=814f64adff3b3deb4a78f4876d70f76e">
+    <link rel="stylesheet" href="/assets/css/styles.min.css?h=bdce9950093cb451695abf4389ec2416">
 <link rel="manifest" href="/assets/js/manifest.json">
 
 <script type="module">
@@ -63,6 +63,13 @@
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
+</script>
+
+<script>
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
+    alert('¡No se permite copiar texto desde esta página!');
+});
 </script>
 </head>
 
@@ -214,7 +221,7 @@
                                     </svg></div>
                                 <div class="px-2">
                                     <h6 class="fw-bold mb-0">Ubicación</h6>
-                                    <p class="text-muted mb-0"><span style="color: rgb(189, 193, 198); background-color: rgb(32, 33, 36);">Cra. 11b #4 Sur 8, Bogotá</span></p>
+                                    <p class="mb-0">Cra. 11b #4 Sur 8, Bogotá</p>
                                 </div>
                             </div>
                         </div>
